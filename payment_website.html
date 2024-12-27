@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment App</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e3f2fd;
+            color: #333;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            color: #1e88e5;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        h2,
+        h3 {
+            color: #3f51b5;
+            margin-bottom: 15px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, #ff8a00, #e52e71);
+            margin: 20px 0;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        div {
+            margin-bottom: 25px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 2px solid #bbb;
+            background-color: #fafafa;
+            font-size: 16px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="password"]:focus,
+        select:focus {
+            border-color: #1e88e5;
+            background-color: #f0f8ff;
+            outline: none;
+        }
+
+        label {
+            font-size: 17px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        ol {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ol li {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        ol li a {
+            color: #ff5722;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        ol li a:hover {
+            color: #d32f2f;
+        }
+
+        option {
+            font-size: 16px;
+        }
+
+        @media (max-width: 600px) {
+            form {
+                padding: 25px;
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>PayFlex</h1>
+    <hr>
+
+    <form action="Payment.php">
+
+        <h2>Account Holder Details</h2>
+        <div>
+            <label for="Name1">Name</label>
+            <input type="text" id="Name1" required> <br>
+
+            <label for="Bank1">Bank</label>
+            <select name="" id="Bank1" required>
+                <option value="Select Bank1" disabled selected>Select Bank</option>
+                <option value="Bank Of Baroda1">Bank Of Baroda</option>
+                <option value="State Bank Of India1">State Bank Of India</option>
+                <option value="HDFC Bank1">HDFC Bank</option>
+                <option value="AXIS Bank1">AXIS Bank</option>
+                <option value="Punjab National Bank1">Punjab National Bank</option>
+                <option value="ICICI Bank1">ICICI Bank</option>
+                <option value="Kotak Mahindra Bank1">Kotak Mahindra Bank</option>
+            </select> <br>
+
+            <label for="Account Number1">Account Number</label>
+            <input type="number" id="Account Number1" required> <br>
+
+            <label for="Mobile Number1">Mobile Number</label>
+            <input type="number" id="Mobile Number1" required> <br>
+
+            <label for="Password1">Password</label>
+            <input type="password" id="Password1" required>
+        </div>
+        <hr>
+
+        <h2>Beneficiary Details</h2>
+        <div>
+            <label for="Name2">Name</label>
+            <input type="text" id="Name2" required> <br>
+
+            <label for="Bank2">Bank</label>
+            <select name="" id="Bank2" required>
+                <option value="Select Bank2" disabled selected>Select Bank</option>
+                <option value="Bank Of Baroda2">Bank Of Baroda</option>
+                <option value="State Bank Of India2">State Bank Of India</option>
+                <option value="HDFC Bank2">HDFC Bank</option>
+                <option value="AXIS Bank2">AXIS Bank</option>
+                <option value="Punjab National Bank2">Punjab National Bank</option>
+                <option value="ICICI Bank2">ICICI Bank</option>
+                <option value="Kotak Mahindra Bank2">Kotak Mahindra Bank</option>
+            </select> <br>
+
+            <label for="Account Number">Account Number</label>
+            <input type="number" id="Account Number" required> <br>
+
+            <label for="Mobile Number2">Mobile Number</label>
+            <input type="number" id="Mobile Number2" required>
+        </div>
+        <hr>
+
+        <h3>Payment Type</h3>
+        <div>
+            <ol>
+                <li>Using <a href="card.html" target="_blank">Card</a></li>
+                <li>Using <a href="upi.html" target="_blank">UPI</a></li>
+                <li>Using <a href="nri.html" target="_blank">NEFT/RTGS/IMPS</a></li>
+            </ol>
+        </div>
+    </form>
+</body>
+
+</html>
